@@ -1,0 +1,11 @@
+Package: ColbyForecastingDocs
+Type: Package
+Title: Documents for auxillary functions
+Version: 1.0
+Author: Ben Tupper
+Maintainer: Ben Tupper <btupper@bigelow.org>
+Description: Provides documentation for Colby Forecasting
+License: MIT + file LICENSE
+Encoding: UTF-8
+URL: https://github.com/BigelowLab/ColbyForecastingDocs
+RoxygenNote: 7.3.2
