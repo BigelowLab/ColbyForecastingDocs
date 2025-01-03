@@ -13,4 +13,3 @@ system(sprintf("git commit -a -m %s", msg))
 system("git push origin main")
 
 setwd(orig_dir)
-
