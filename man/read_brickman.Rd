@@ -7,11 +7,14 @@
 read_brickman(
   db = dplyr::filter(brickman_database(), scenario == "PRESENT", year == "PRESENT",
     interval == "mon"),
+  add_depth = TRUE,
   path = brickman_path()
 )
 }
 \arguments{
 \item{db}{table of database of one group type}
+
+\item{add_depth}{logical, if TRUE include depth as a variable}
 
 \item{path}{chr, the brickman data path}
 }
