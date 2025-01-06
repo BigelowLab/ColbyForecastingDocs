@@ -2,7 +2,7 @@
 % Please edit documentation in R/select_covariates.R
 \name{select_covariates}
 \alias{select_covariates}
-\title{Given a species, month and sampling approach select variabkes for each month}
+\title{Given a species, month and sampling approach select variables for each month}
 \usage{
 select_covariates(
   approach = "greedy",
@@ -21,8 +21,8 @@ select_covariates(
 \item{path}{chr file path to the personal data directory}
 }
 \value{
-a
+a list suitable for storing as a YAML configuration
 }
 \description{
-Given a species, month and sampling approach select variabkes for each month
+Given a species, month and sampling approach select variables for each month
 }
