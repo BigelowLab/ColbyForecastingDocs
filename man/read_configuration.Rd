@@ -4,9 +4,15 @@
 \alias{read_configuration}
 \title{Given a version identifier, read a configuration}
 \usage{
-read_configuration(version = "v001", path = data_path("models"))
+read_configuration(
+  scientificname = "Canis familiaris",
+  version = "v001",
+  path = data_path("models")
+)
 }
 \arguments{
+\item{scientificname}{str the scientific name}
+
 \item{version}{chr the version identifier (defaults to 'v001')}
 
 \item{path}{chr you personal model data path (defaults to `data_path("models")`)}

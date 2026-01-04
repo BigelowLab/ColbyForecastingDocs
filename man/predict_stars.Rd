@@ -4,12 +4,21 @@
 \alias{predict_stars}
 \title{Predict a classification from stars object}
 \usage{
-predict_stars(wflow, newdata, type = "prob", threshold = 0.5, ...)
+predict_stars(
+  x,
+  newdata,
+  wids = dplyr::pull(x, dplyr::all_of("wflow_id")),
+  type = "prob",
+  threshold = 0.5,
+  ...
+)
 }
 \arguments{
-\item{wflow}{a workflow object}
+\item{x}{a workflow set table}
 
 \item{newdata}{stars data}
+
+\item{wids}{str one or more workflow ids}
 
 \item{threshold}{num the aribitray threshold used to define the outcome}
 

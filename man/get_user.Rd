@@ -4,7 +4,12 @@
 \alias{get_user}
 \title{A function to retrieve the username}
 \usage{
-get_user()
+get_user(strip_basename = TRUE)
+}
+\arguments{
+\item{strip_basename}{logical, if TRUE return just the basename. 
+This only has meaning if the platform is Windows, harmless
+otherwise}
 }
 \value{
 username

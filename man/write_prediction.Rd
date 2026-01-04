@@ -2,20 +2,33 @@
 % Please edit documentation in R/predict.R
 \name{write_prediction}
 \alias{write_prediction}
-\title{Save a prediction (or a time series of predictions)}
+\title{Save a prediction to file}
 \usage{
-write_prediction(x, filename = "prediction.tif", attr = ".pred_presence")
+write_prediction(
+  x,
+  scientificname = "Mola mola",
+  version = "v1",
+  year = "CURRENT",
+  scenario = "CURRENT",
+  path = data_path("predictions")
+)
 }
 \arguments{
 \item{x}{stars object with one or more time layers}
 
-\item{filename}{chr, the name of the file to write}
+\item{scientificname}{chr, the name of the species}
 
-\item{attr}{chr or num, either the positional index or attribute name to write.}
+\item{version}{chr, the version identifier}
+
+\item{year}{chr, one of CURRENT, 2055 or 2075}
+
+\item{scenario}{chr, one of CURRENT, RCP45 or RCP85}
+
+\item{path}{chr the data path}
 }
 \value{
-the input object x (suitable for piping)
+the input object x invisibly (also suitable for piping)
 }
 \description{
-Save a prediction (or a time series of predictions)
+Save a prediction to file
 }

@@ -4,7 +4,7 @@
 \alias{obis_path}
 \title{Retrieve the path to the obis data}
 \usage{
-obis_path(root = personal_data_path())
+obis_path(root = ROOT_DATA_PATH)
 }
 \arguments{
 \item{root}{chr, the root personal data directory}

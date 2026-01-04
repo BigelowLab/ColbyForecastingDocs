@@ -4,14 +4,19 @@
 \alias{write_workflow}
 \title{Write a workflow given the workflow, version and path}
 \usage{
-write_workflow(x, version = "g_Aug", path = data_path("models"))
+write_workflow(
+  x,
+  version = "Aug",
+  type = get_model_type(x),
+  path = data_path("models")
+)
 }
 \arguments{
 \item{x}{workflow object}
 
-\item{version}{chr the version to write}
+\item{version}{str the version to write}
 
-\item{path}{chr the path to the data directory}
+\item{path}{str the path to the data directory}
 }
 \value{
 workflow itself is returned

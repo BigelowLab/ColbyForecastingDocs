@@ -5,20 +5,20 @@
 \title{Given a species, month and sampling approach select variables for each month}
 \usage{
 select_covariates(
-  approach = "greedy",
   mon = "Jan",
   scientificname = "Mola mola",
-  path = data_path()
+  path = data_path(),
+  must_have_depth = TRUE
 )
 }
 \arguments{
-\item{approach}{chr one of "greedy" (default) or "conservative"}
-
 \item{mon}{chr month abbreviation ("Jan" default)}
 
 \item{scientificname}{chr the species studied (default "Mola mola")}
 
 \item{path}{chr file path to the personal data directory}
+
+\item{must_have_depth}{logical, if TRUE then make sure depth is a covariate}
 }
 \value{
 a list suitable for storing as a YAML configuration

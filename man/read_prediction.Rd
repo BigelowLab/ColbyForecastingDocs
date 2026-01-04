@@ -2,29 +2,33 @@
 % Please edit documentation in R/predict.R
 \name{read_prediction}
 \alias{read_prediction}
-\title{Read a prediction (or a time series of predictions)}
+\title{Read a prediction from file}
 \usage{
-read_prediction(filename, attr = ".pred_presence", time = NULL)
-
-read_prediction(filename, attr = ".pred_presence", time = NULL)
+read_prediction(
+  x,
+  scientificname = "Mola mola",
+  version = "v1",
+  year = "CURRENT",
+  scenario = "CURRENT",
+  path = data_path("predictions")
+)
 }
 \arguments{
-\item{filename}{chr, the name of the file to write}
+\item{x}{stars object with one or more time layers}
 
-\item{attr}{chr the name to apply to the attribute}
+\item{scientificname}{chr, the name of the species}
 
-\item{time}{any type, an optional "time" to apply the the third dimension for a 
-mutil-layer array}
+\item{version}{chr, the version identifier}
 
-\item{file}{chr, the name of the file to write}
+\item{year}{chr, one of CURRENT, 2055 or 2075}
+
+\item{scenario}{chr, one of CURRENT, RCP45 or RCP85}
+
+\item{path}{chr the data path}
 }
 \value{
 the input object x (suitable for piping)
-
-stars object
 }
 \description{
-Read a prediction (or a time series of predictions)
-
-Read a prediction (or a time series of predictions)
+Read a prediction from file
 }

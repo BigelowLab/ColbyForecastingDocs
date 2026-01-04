@@ -4,12 +4,18 @@
 \alias{read_workflow}
 \title{Read a workflow given the version and path}
 \usage{
-read_workflow(version = "g_Aug", path = data_path("models"))
+read_workflow(
+  version = "Aug",
+  type = "rand_forest",
+  path = data_path("models")
+)
 }
 \arguments{
-\item{version}{chr the version to read}
+\item{version}{str the version to read}
 
-\item{path}{chr the path to the data directory}
+\item{type}{str the model type name ala "rand_forest"}
+
+\item{path}{str the path to the data directory}
 }
 \value{
 workflow

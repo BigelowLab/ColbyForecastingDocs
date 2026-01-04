@@ -7,8 +7,8 @@
 fetch_obis(
   scientificname = "Mola mola",
   bb = colby_bbox(),
-  fields = c("id", "basisOfRecord", "eventDate", "eventTime", "individualCount",
-    "decimalLongitude", "decimalLatitude"),
+  fields = standard_obis_fields(),
+  tidy = TRUE,
   output_path = make_path(data_path("obis")),
   crs = 4326
 )
@@ -22,11 +22,16 @@ The output oc `colby_bbox()` will do nicely.}
 
 \item{fields}{chr one or more fields to retrieve}
 
+\item{tidy}{logical, if TRUE tidy up the downloaded data}
+
 \item{output_path}{chr, the destination path where the data are stored using 
 Files are automatically named "genus_species.gpkg" or "genus.gpkg" as
 appropriate for each request.}
 
 \item{crs}{the CRS for the data}
+}
+\value{
+spatial table of observations
 }
 \description{
 Fetch one or more species of obis data

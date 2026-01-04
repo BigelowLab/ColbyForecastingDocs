@@ -4,7 +4,7 @@
 suppressPackageStartupMessages({
   library(devtools)
 })
-pkg_path  = "~/Library/CloudStorage/Dropbox/code/projects/ColbyForecastingDocs"
+pkg_path  = "/mnt/ecocast/projects/ColbyForecasting/ColbyForecastingDocs"
 orig_dir = setwd(pkg_path)
 
 system("git add *")

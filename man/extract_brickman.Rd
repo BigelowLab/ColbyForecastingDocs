@@ -9,7 +9,8 @@ extract_brickman(x = read_brickman(), y = gom_buoys(), form = "long")
 \arguments{
 \item{x}{stars object (with or without month dimension)}
 
-\item{y}{sf point data}
+\item{y}{sf point data, if this has a "month" attribute then we extract by month
+as long as x has a month dimension}
 
 \item{form}{chr one of either "long" (the default) or "wide" to control 
 output column layout.}

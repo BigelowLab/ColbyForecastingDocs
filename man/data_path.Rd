@@ -4,7 +4,7 @@
 \alias{data_path}
 \title{Get the data path}
 \usage{
-data_path(..., root = personal_data_path())
+data_path(..., root = ROOT_DATA_PATH)
 }
 \arguments{
 \item{root}{chr, the root personal data directory}

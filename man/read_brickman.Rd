@@ -7,16 +7,21 @@
 read_brickman(
   db = dplyr::filter(brickman_database(), scenario == "PRESENT", year == "PRESENT",
     interval == "mon"),
-  add_depth = TRUE,
+  add = c("none", "depth", "month")[1],
+  log_me = c("none", "depth", "Xbtm")[1],
   path = brickman_path()
 )
 }
 \arguments{
 \item{db}{table of database of one group type}
 
-\item{add_depth}{logical, if TRUE include depth as a variable}
+\item{add}{str, zero or more static variable to add like "depth" and "month"
+(as long as the database includes interval 'mon'). If the value is not
+"depth" and/or "month", like "none", then nothing is added.}
 
-\item{path}{chr, the brickman data path}
+\item{log_me}{str, zero or more variable to log scale}
+
+\item{path}{str, the brickman data path}
 }
 \value{
 stars array

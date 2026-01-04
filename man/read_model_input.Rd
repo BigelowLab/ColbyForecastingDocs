@@ -2,24 +2,40 @@
 % Please edit documentation in R/model_input.R
 \name{read_model_input}
 \alias{read_model_input}
-\title{Reads a model input file given species, month, approach and path}
+\alias{write_model_input}
+\title{Reads a model input file given species and path}
 \usage{
 read_model_input(
   scientificname = "Mola mola",
-  mon = "Jan",
-  approach = "greedy",
+  version = NULL,
+  log_me = NULL,
+  form = c("table", "sf")[2],
+  na.rm = TRUE,
+  path = data_path("model_input")
+)
+
+write_model_input(
+  x,
+  scientificname = "Mola mola",
+  version = NULL,
   path = data_path("model_input")
 )
 }
 \arguments{
 \item{scientificname}{chr, the species name}
 
-\item{mon}{chr month abbreviation}
+\item{version}{chr or NULL, if not NULL add this to the filename. A version 
+identifier like "v2.01", etc.}
 
-\item{approach}{chr, one of "greedy" or "conservative"}
+\item{log_me}{NULL or str with one or more variables to take the log of}
+
+\item{form}{string, one of 'table' or 'sf'  The are the same except that the
+former lacks spatial information}
+
+\item{na.rm}{logical, if TRUE remove any rows with any NA values}
 
 \item{path}{chr the path to the data directory}
 }
 \description{
-Reads a model input file given species, month, approach and path
+Reads a model input file given species and path
 }

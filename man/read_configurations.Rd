@@ -4,9 +4,11 @@
 \alias{read_configurations}
 \title{Read one or more configurations into a table.}
 \usage{
-read_configurations(versions, path = data_path("models"))
+read_configurations(scientificname, versions, path = data_path("models"))
 }
 \arguments{
+\item{scientificname}{str one scientific name (only one)}
+
 \item{versions}{chr one or more versions}
 
 \item{path}{the model data path}

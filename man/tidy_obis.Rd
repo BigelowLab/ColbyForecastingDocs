@@ -4,12 +4,7 @@
 \alias{tidy_obis}
 \title{Tidy raw OBIS results and return as an sf object}
 \usage{
-tidy_obis(
-  x = fetch_obis(),
-  fields = c("id", "basisOfRecord", "eventDate", "eventTime", "individualCount",
-    "decimalLongitude", "decimalLatitude"),
-  crs = 4326
-)
+tidy_obis(x = fetch_obis(), fields = standard_obis_fields(), crs = 4326)
 }
 \arguments{
 \item{x}{data frame or tibble of raw obis results}
